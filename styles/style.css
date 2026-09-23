@@ -1,0 +1,65 @@
+html {
+  /* px means "pixels". The base font size is now 10 pixels high */
+  font-size: 25px;
+  /* Replace PLACEHOLDER with the font-family property value you got from Google Fonts */
+  font-family:"gf_Roboto_Condensed", sans-serif ;
+}
+}
+p,
+.my-class,
+#my-id {
+  color: red;
+}
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p,
+li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+html {
+  background-color: #Ffffff;
+}
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FFFFE0;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+padding-top: 0;
+padding-right: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539f;
+  text-shadow: 3px 3px 1px black;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.done {
+  color: darkseagreen;
+  text-decoration: line-through solid black 2px;
+}
+const listItems = document.querySelectorAll("li");
+
+function toggleDone(e) {
+  if (!e.target.className) {
+    e.target.className = "done";
+  } else {
+    e.target.className = "";
+  }
+}
+
+listItems.forEach((item) => {
+  item.addEventListener("click", toggleDone);
+});
